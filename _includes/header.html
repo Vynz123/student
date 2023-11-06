@@ -1,43 +1,53 @@
-<header class="site-header">
-
-  <div id="header">
-    <nav style="background-color: #1565C0; width: 200px; padding: 20px; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); transition: width 1s ease-in-out;"">
-      <ul style="list-style: none; padding: 0;">
-        <li class="fork" style="margin-bottom: 15px;">
-          <a href="{{site.baseurl}}/" style="display: block; padding: 10px; color: white; text-decoration: none; border-radius: 5px; transition: background-color 0.3s;">
-            Home
-          </a>
-        </li>
-        <li class="fork" style="margin-bottom: 15px;">
-          <a href="{{site.baseurl}}/blogs" style="display: block; padding: 10px; color: white; text-decoration: none; border-radius: 5px; transition: background-color 0.3s;">
-            Blogs
-          </a>
-        </li>
-        <li class="fork" style="margin-bottom: 15px;">
-          <a href="https://github.com/Vynz123" style="display: block; padding: 10px; color: white; text-decoration: none; border-radius: 5px; transition: background-color 0.3s;">
-            My Github
-          </a>
-        </li>
-        
-        <li class="fork" style="margin-bottom: 15px;">
-          <a href="{{site.baseurl}}/csp" style="display: block; padding: 10px; color: white; text-decoration: none; border-radius: 5px; transition: background-color 0.3s;">
-            CSP
-          </a>
-        </li>
-        <!-- <li class="fork" style="margin-bottom: 15px;">
-          <a href="{{site.baseurl}}/blogs" style="display: block; padding: 10px; color: white; text-decoration: none; border-radius: 5px; transition: background-color 0.3s;">
-            Blogs
-          </a>
-        </li>
-        <li class="title">
-          <a href="{{ site.github.repository_url }}#readme" style="display: block; padding: 10px; color: white; text-decoration: none; border-radius: 5px; transition: background-color 0.3s;">
-            View On GitHub
-          </a>
-        </li> -->
-       
-      </ul>
-    </nav>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <header class="site-header">
+        <div id="header">
+            <div id="menu-button" style="position: absolute; top: 10px; left: -500px; cursor: pointer;" onclick="toggleSidebar()">&#9776;</div>
+            <nav id="sidebar" style="position: fixed; top: 0; left: -200px; height: 100%; width: 200px; background-color: #1565C0; padding: 20px; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); transition: left 1s ease-in-out;">
+                <ul style="list-style: none; padding: 0;">
+                    <li class="fork" style="margin-bottom: 15px;">
+                        <a href="{{site.baseurl}}/" style="display: block; padding: 10px; color: white; text-decoration: none; border-radius: 5px; transition: background-color 0.3s;">
+                            Home
+                        </a>
+                    </li>
+                    <li class="fork" style="margin-bottom: 15px;">
+                        <a href="{{site.baseurl}}/blogs" style="display: block; padding: 10px; color: white; text-decoration: none; border-radius: 5px; transition: background-color 0.3s;">
+                            Blogs
+                        </a>
+                    </li>
+                    <li class="fork" style="margin-bottom: 15px;">
+                        <a href="https://github.com/Vynz123" style="display: block; padding: 10px; color: white; text-decoration: none; border-radius: 5px; transition: background-color 0.3s;">
+                            My Github
+                        </a>
+                    </li>
+                    <li class="fork" style="margin-bottom: 15px;">
+                        <a href="{{site.baseurl}}/csp" style="display: block; padding: 10px; color: white; text-decoration: none; border-radius: 5px; transition: background-color 0.3s;">
+                            CSP
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div><!-- end header -->
+    </header>
     
-    
-  </div><!-- end header -->
-</header>
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const menuButton = document.getElementById('menu-button');
+            
+            if (sidebar.style.left === '-200px') {
+                sidebar.style.left = '0';
+                menuButton.style.left = '210px';
+            } else {
+                sidebar.style.left = '-200px';
+                menuButton.style.left = '10px';
+            }
+        }
+    </script>
+</body>
+</html>

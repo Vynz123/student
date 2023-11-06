@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting" style="width: 250%; margin: 0 auto; padding-left: 20%;">
 
     <h1 
       class="post-title p-name" itemprop="name headline">{{ page.title | escape }}
@@ -56,8 +56,6 @@ layout: default
     {%- if page.toc -%}
       {% include toc.html html=content %}
     {%- endif -%}
-
-  </header>
 
   <div class="post-content e-content" itemprop="articleBody">
     {{ content }}
